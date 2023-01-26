@@ -1,0 +1,68 @@
+:root {
+  --var-primary: rgb(158, 144, 167);
+  --var-lighted: rgb(191, 174, 202);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#chart {
+  border: none;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#tooltip {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  background: var(--var-lighted);
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  height: auto;
+  width: fit-content
+}
+
+.bar {
+  fill: var(--var-primary);
+  border: 1px solid white;
+}
+
+.bar:hover {
+  fill: black;
+}
+
+svg {
+  background-color: whitesmoke;
+  box-shadow: 0 0 15px black;
+  overflow: visible;
+  margin: 20px;
+}
+
+.tick {
+  font-size: 1em;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 1em;
+}
